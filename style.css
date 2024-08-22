@@ -9,7 +9,7 @@
     --bg-btn-grad: linear-gradient(to bottom right, #00ccff, #e100ff);
     --video-color-hue: hue-rotate(160deg);
     --prf-img-ring-blur: 0px 0px 25px rgb(0, 255, 242), 0px 0px 15px rgb(0, 255, 242) inset;
-    --prj-card-color: linear-gradient(rgb(255, 132, 0) 50%, rgb(255, 208, 0));
+    --prj-card-color: linear-gradient(rgb(0, 94, 255) , rgb(0, 242, 255));
     
 }
 
