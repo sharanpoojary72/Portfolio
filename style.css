@@ -7,9 +7,10 @@
     --bg-theme-color: rgb(0, 94, 255);
     /* --bg-theme-color: #ff0000; */
     --bg-btn-grad: linear-gradient(to bottom right, #00ccff, #e100ff);
-    --video-color-hue: hue-rotate(160deg);
+    --video-color-hue: hue-rotate(310deg);
     --prf-img-ring-blur: 0px 0px 25px rgb(0, 255, 242), 0px 0px 15px rgb(0, 255, 242) inset;
-    --prj-card-color: linear-gradient(rgb(0, 132, 255), rgb(0, 213, 255));
+    --prj-card-color: linear-gradient(rgb(255, 132, 0) 50%, rgb(255, 208, 0));
+    
 }
 
 .lightmode {
@@ -19,7 +20,6 @@
     /* --bg-theme-color: #005eff; */
     --bg-btn-grad: linear-gradient(to bottom right, #00ccff, #e100ff);
     --video-color-hue: hue-rotate(0deg);
-    --prf-img-ring-blur: 0px 0px 25px rgb(0, 255, 242), 0px 0px 15px rgb(0, 255, 242) inset;
     --prj-card-color: linear-gradient(rgb(0, 132, 255), rgb(0, 213, 255));
 }
 
@@ -90,6 +90,7 @@ nav {
     /* mix-blend-mode: difference; */
     animation: slideDown 2s ease-in-out backwards;
     animation-delay: calc(.1s*var(--i));
+    transition: all 0.3s ease-in-out;
 }
 
 nav ul {
@@ -106,11 +107,6 @@ nav li {
 }
 
 nav a {
-
-    color: var(--bg-text-color);
-}
-
-nav a {
     height: 100%;
     padding: 0 2rem;
     text-decoration: none;
@@ -119,6 +115,8 @@ nav a {
     justify-items: center;
     outline: 0px solid rgba(0, 0, 0, 0);
     box-sizing: border-box;
+
+    color: var(--bg-text-color);
 }
 
 .side-margin li:not(:nth-child(1)),.sidebar li {
@@ -172,7 +170,7 @@ nav li:first-child {
     justify-content: flex-start;
     backdrop-filter: blur(10px);
     border-left: 1px solid var(--bg-theme-color);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.6s ease-in-out;
 }
 
 .sidebar.active{
@@ -213,7 +211,7 @@ nav li:first-child {
     /* transition: all 0.5s ease-in-out; */
     animation: slideLeft 3s ease-in-out backwards;
     animation-delay: calc(.2s*var(--i));
-
+    transition: all 0.6s ease-in-out;
 }
 
 #theme-switch svg {
@@ -259,6 +257,8 @@ nav li:first-child {
     /* z-index: 25; */
     animation: slideLeft 3s ease-in-out backwards;
     animation-delay: calc(.2s*var(--i));
+    transition: all 0.6s ease-in-out;
+
 }
 
 #color-switch::before{
@@ -268,6 +268,8 @@ nav li:first-child {
     box-shadow: 0px 0px 5px var(--bg-color);
     background-color: var(--bg-theme-color);
     border-radius: 50%;
+    transition: all 0.6s ease-in-out;
+
 }
 
 .colorSwitch-container .theme-color-container{
@@ -342,6 +344,7 @@ nav li:first-child {
     rotate: 180deg;
     animation: video-op 3s ease-in-out backwards;
     animation-delay: calc(.8s*var(--i));
+    transition: all 0.6s ease-in-out;
 }
 
 @keyframes video-op {
@@ -404,12 +407,15 @@ nav li:first-child {
 #multitext {
     animation: slideLeft 3s ease-in-out 10s backwards;
     animation-delay: calc(.2s*var(--i));
+    
 }
 
 #multitext span {
     color: var(--bg-theme-color);
     position: relative;
     font-weight: 400;
+    transition: all 0.6s ease-in-out;
+
 }
 
 #multitext span::before {
@@ -421,7 +427,9 @@ nav li:first-child {
     width: 3px;
     background: var(--bg-theme-color);
     transform: translateY(-45%);
-    animation: blink 0.7s infinite
+    animation: blink 0.7s infinite;
+    transition: all 0.6s ease-in-out;
+
 }
 
 #multitext span.stop-blinking::before {
@@ -528,7 +536,7 @@ nav li:first-child {
     background-color: rgba(0, 0, 0, 0);
     animation: slideUp 2s ease-in-out 900ms backwards;
     animation-delay: calc(.2s*var(--i));
-    transition: all 500ms ease-in-out;
+    transition: all 0.6s ease-in-out;
 }
 
 .icons i:hover {
@@ -552,7 +560,7 @@ nav li:first-child {
     animation-delay: calc(.2s*var(--i));
     /* animation-delay: 6s; */
     backdrop-filter: blur(1px);
-    transition: all 2s ease-in-out;
+    transition: all 0.6s ease-in-out;
     
 }
 
@@ -658,6 +666,8 @@ nav li:first-child {
     justify-content: center;
     align-items: center;
     font-weight: 500;
+    transition: all 0.6s ease-in-out;
+
 }
 
 .download-btn::after {
@@ -726,6 +736,8 @@ nav li:first-child {
     outline: 2px solid var(--bg-theme-color);
     outline-offset: 4px;
     border-radius: 100px;
+    transition: all 0.6s ease-in-out;
+
 }
 
 .skill-box .ts-title {
@@ -754,6 +766,8 @@ nav li:first-child {
     background: var(--bg-theme-color);
     animation: progress 0.4s ease-in-out forwards;
     opacity: 0;
+    transition: all 0.6s ease-in-out;
+
 }
 
 /* #css {
@@ -799,6 +813,8 @@ nav li:first-child {
     border-radius: 3px;
     background-color: var(--bg-theme-color);
     z-index: 1;
+    transition: all 0.6s ease-in-out;
+
 }
 
 .tooltip::before {
@@ -811,6 +827,8 @@ nav li:first-child {
     background-color: var(--bg-theme-color);
     transform: translateX(-50%) rotate(45deg);
     z-index: -1;
+    transition: all 0.6s ease-in-out;
+
 }
 
 /* SKILL LEFT END */
@@ -928,7 +946,7 @@ nav li:first-child {
     border-radius: 0.5rem;
     width: 20rem;
     height: 10rem;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .p-card:hover {
@@ -936,6 +954,8 @@ nav li:first-child {
     box-shadow: 0px 0px 30px var(--bg-theme-color);
     width: 23rem;
     height: 13rem;
+    transition: all 0.6s ease-in-out;
+
 }
 
 .proj-card-block h3 {
@@ -1015,6 +1035,8 @@ nav li:first-child {
     outline: 2px solid var(--bg-theme-color);
     outline-offset: 4px;
     border-radius: 100px;
+    transition: all 0.6s ease-in-out;
+
 }
 
 .contact-details a,
@@ -1038,6 +1060,8 @@ p {
     align-items: center;
     box-shadow: 0px 0px 10px var(--bg-text-color);
     order: 2;
+    transition: all 0.6s ease-in-out;
+
 }
 
 /* .contact form label {
@@ -1096,6 +1120,7 @@ p {
     cursor: pointer;
     background-color: var(--bg-theme-color);
     transition: all 0.3s ease-in;
+    
 }
 
 
@@ -1103,6 +1128,8 @@ p {
 /*------------------- FOOTER------------------------ */
 footer {
     border-top: 1px solid var(--bg-theme-color);
+    transition: all 0.6s ease-in-out;
+
 }
 
 footer h4 {
@@ -1569,4 +1596,28 @@ footer h4 {
         height: 20px;
     }
 
+}
+
+
+@media screen and (max-width:361px) {
+
+    .project{
+        height: 100%;
+    }
+    .proj-card-section{
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    }
+    .p-card{
+        width: 8rem;
+        height: 8rem;
+    }
+    .p-card:hover{
+        width: 9rem;
+        height: 8rem;
+    }
+    .proj-card-block h3{
+        font-size: 0.8rem;
+    }
 }

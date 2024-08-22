@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./images/favicon.ico" type="image/icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <title>Sharan's Portfolio</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -20,7 +23,14 @@
 
 <body>
     <!-- LOADER  -->
-    <div id="loader"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150"><path fill="none" stroke="" stroke-width="1" stroke-linecap="round" stroke-dasharray="300 385" stroke-dashoffset="0" d="M275 75c0 31-27 50-50 50-58 0-92-100-150-100-28 0-50 22-50 50s23 50 50 50c58 0 92-100 150-100 24 0 50 19 50 50Z"><animate attributeName="stroke-dashoffset" calcMode="spline" dur="2" values="685;-685" keySplines="0 0 1 1" repeatCount="indefinite"></animate></path></svg></div>
+    <div id="loader"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150">
+            <path fill="none" stroke="" stroke-width="1" stroke-linecap="round" stroke-dasharray="300 385"
+                stroke-dashoffset="0"
+                d="M275 75c0 31-27 50-50 50-58 0-92-100-150-100-28 0-50 22-50 50s23 50 50 50c58 0 92-100 150-100 24 0 50 19 50 50Z">
+                <animate attributeName="stroke-dashoffset" calcMode="spline" dur="2" values="685;-685"
+                    keySplines="0 0 1 1" repeatCount="indefinite"></animate>
+            </path>
+        </svg></div>
 
     <!-- NAVBAR  -->
     <main>
@@ -36,10 +46,10 @@
                 <li><a href="#skill">Skills</a></li>
                 <li><a href="#project">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
-    
+
             </ul>
             <ul class="side-margin">
-                <li class=" nav-anim name-logo" style="--i:1"><a href="#"></a></li>
+                <li class=" name-logo" style="--i:1"><a href="#"></a></li>
                 <li class="hideOnMobile nav-anim" style="--i:2"><a href="#home">Home</a></li>
                 <li class="hideOnMobile nav-anim" style="--i:3"><a href="#about">About Me</a></li>
                 <li class="hideOnMobile nav-anim" style="--i:4"><a href="#skill">Skills</a></li>
@@ -51,40 +61,51 @@
                         </svg></a></li>
             </ul>
         </nav>
-    
+
         <!-- FLOAT BUTTONS -->
-    
+
         <button id="theme-switch" style="--i:3">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff">
+                <path
+                    d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff">
+                <path
+                    d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z" />
+            </svg>
         </button>
-        
-        
+
+
         <div class="colorSwitch-container">
             <button id="color-switch" style="--i:7">
             </button>
-        
+
             <div class="theme-color-container">
-                <span class="theme-buttons" data-color="rgb(0, 94, 255)" style="background-color: rgb(0, 94, 255);"></span>
-                <span class="theme-buttons" data-color="#ff0000" style="background-color: rgb(255, 0, 0);"></span>
-                <span class="theme-buttons" data-color="#8000ff" style="background-color: rgb(128, 0, 255);"></span>
-                <span class="theme-buttons" data-color="#00ff04" style="background-color: rgb(0, 255, 4);"></span>
-                <span class="theme-buttons" data-color="rgb(255, 132, 0)" style="background-color: rgb(255, 132, 0);"></span>
-    
+                <span class="theme-buttons" data-color="rgb(0, 94, 255)"
+                    style="background-color: rgb(0, 94, 255);"></span>
+                <span class="theme-buttons" data-color="rgb(255, 0, 0)"
+                    style="background-color: rgb(255, 0, 0);"></span>
+                <span class="theme-buttons" data-color="rgb(128, 0, 255)"
+                    style="background-color: rgb(128, 0, 255);"></span>
+                <span class="theme-buttons" data-color="rgb(0, 179, 21)"
+                    style="background-color: rgb(0, 179, 21);"></span>
+                <span class="theme-buttons" data-color="rgb(255, 132, 0)"
+                    style="background-color: rgb(255, 132, 0);"></span>
+
             </div>
-        
+
         </div>
-        
-    
-    
+
+
+
         <a href="#home">
             <button id="backtotop" style="--i:10">
                 <i class="fa-solid fa-arrow-up fa-lg"></i>
             </button>
-    
+
         </a>
         <!-- --------------- MAIN PAGE --------------- -->
-    
+
         <div class="videobg" id="home">
             <video id="background-video" style="--i:3" autoplay loop muted
                 poster="./images/vecteezy_technology-network-background_4827521.00_00_08_07.Still001.jpg">
@@ -95,38 +116,43 @@
                     <h3 style="--i:6">Hello, it's Me</h3>
                     <h1 style="--i:7"><span>S</span>HARAN K POOJARY</h1>
                     <h3 id="multitext" style="--i:8">And I'm a <span></span> </h3>
-    
+
                     <div class="icons">
-                        <a href="https://www.instagram.com/sharanpoojary72/" target="_blank"><i class="fa-brands fa-instagram fa-2x" style=" --i:9"></i></a>
-                        <a href="https://www.facebook.com/sharan.poojary.12" target="_blank"><i class="fa-brands fa-facebook-f fa-2x" style=" --i:10"></i></a>
-                        <a href="https://x.com/sharanpoojary72" target="_blank"><i class="fa-brands fa-twitter fa-2x" style=" --i:11"></i></a>
-                        <a href="https://www.linkedin.com/in/sharan-poojary-157b5b104/" target="_blank"><i class="fa-brands fa-linkedin-in fa-2x" style=" --i:12"></i></a>
+                        <a href="https://www.instagram.com/sharanpoojary72/" target="_blank"><i
+                                class="fa-brands fa-instagram fa-2x" style=" --i:9"></i></a>
+                        <a href="https://www.facebook.com/sharan.poojary.12" target="_blank"><i
+                                class="fa-brands fa-facebook-f fa-2x" style=" --i:10"></i></a>
+                        <a href="https://x.com/sharanpoojary72" target="_blank"><i class="fa-brands fa-twitter fa-2x"
+                                style=" --i:11"></i></a>
+                        <a href="https://www.linkedin.com/in/sharan-poojary-157b5b104/" target="_blank"><i
+                                class="fa-brands fa-linkedin-in fa-2x" style=" --i:12"></i></a>
                     </div>
                 </div>
                 <div class="prof-img-container" style="--i:12">
                     <div class="prof-img"></div>
                 </div>
-    
+
             </div>
         </div>
-    
-    
+
+
         <!------------------------ ABOUT ME ------------------------ -->
         <div class="about" id="about">
             <h2>ABOUT ME</h2>
-            <p>I'm a passionate Full Stack Developer with a keen eye for crafting exceptional digital experiences. With a
+            <p>I'm a passionate Full Stack Developer with a keen eye for crafting exceptional digital experiences. With
+                a
                 solid foundation in both frontend and backend development, I thrive on turning ideas into reality. My
                 expertise spans a wide range of technologies, allowing me to build robust, scalable, and user-centric
                 applications.
-    
+
                 I'm driven by a constant desire to learn and grow, staying up-to-date with the latest industry trends. I
                 believe in the power of clean code, effective collaboration, and delivering high-quality products.</p>
-    
+
             <a href="./files/Sharan Resume.pdf" class="download-btn" target="_blank">Download CV</a>
         </div>
-    
+
         <!---------------------------- SKILLS ---------------------------->
-    
+
         <div class="skill" id="skill">
             <h2>SKILLS</h2>
             <div class="skill-separator">
@@ -187,51 +213,51 @@
                         </div>
                     </div>
                 </div>
-    <!-- ------------------------------------ -->
+                <!-- ------------------------------------ -->
                 <div class="pro-skill">
                     <h3>Professional Skill</h3>
                     <div class="pro-skill-divider">
                         <div class="circular-progress" id="comm">
-    
+
                             <div class="prodata">
                                 <h5>65%</h5>
                                 <h5>Communication</h5>
                             </div>
-    
+
                         </div>
                         <div class="circular-progress" id="probsol">
-    
+
                             <div class="prodata">
                                 <h5>65%</h5>
                                 <h5>Problem Solving</h5>
                             </div>
-    
+
                         </div>
                         <div class="circular-progress" id="creativity">
-    
+
                             <div class="prodata">
                                 <h5>65%</h5>
                                 <h5>Creativity</h5>
                             </div>
-    
+
                         </div>
                         <div class="circular-progress" id="teamwork">
-    
+
                             <div class="prodata">
                                 <h5>65%</h5>
                                 <h5>Teamwork</h5>
                             </div>
-    
+
                         </div>
-    
+
                     </div>
                 </div>
             </div>
         </div>
-    
-    
+
+
         <!-- ------------------------ PROJECTS ---------------------------- -->
-    
+
         <div class="project" id="project">
             <h2>PROJECTS</h2>
             <div class="proj-card-section">
@@ -267,14 +293,14 @@
                 </a>
             </div>
         </div>
-    
+
         <!----------------------------- FORM --------------------->
-    
+
         <div class="contact" id="contact">
             <h2>CONTACT ME</h2>
-    
+
             <div class="contact-grid">
-    
+
                 <div class="contact-cards">
                     <h2>Let's Talk on something great together</h2>
                     <div class="contact-details">
@@ -283,7 +309,8 @@
                         <i class="fa-solid fa-phone" ;"></i>
                         <p>+91 90226 41630</p>
                         <i class="fa-solid fa-location-dot"></i>
-                        <p><a href="https://maps.app.goo.gl/Z9bsTcxWscjzB1kB8" target="_blank">Borivali West, Mumbai</a></p>
+                        <p><a href="https://maps.app.goo.gl/Z9bsTcxWscjzB1kB8" target="_blank">Borivali West, Mumbai</a>
+                        </p>
                     </div>
                     <!-- <div class="contact-links">
     
@@ -292,17 +319,18 @@
                 <!-- <fieldset> -->
                 <!-- <form action="https://formspree.io/f/xvgpaepn" method="post"> -->
                 <form action="https://formsubmit.co/sharanpoojary72@gmail.com" method="post">
-    
-                    <input type="text" placeholder="Enter your First Name" id="fName" required name="first-name" autocomplete="given-name">
-    
+
+                    <input type="text" placeholder="Enter your First Name" id="fName" required name="first-name"
+                        autocomplete="given-name">
+
                     <input type="text" placeholder="Enter your Last Name" id="lName" required name="last-name">
-    
+
                     <input type="email" placeholder="Enter your Email ID" id="email" required name="email">
-    
+
                     <input type="text" placeholder="Enter your Mobile Number" id="number" name="mobile-no.">
-    
+
                     <textarea name="message" id="text" placeholder="Enter your Message"></textarea>
-    
+
                     <div class="form-button">
                         <input type="submit" value="Submit">
                         <input type="reset" value="Reset" />
@@ -310,16 +338,16 @@
                 </form>
                 <!-- </fieldset> -->
             </div>
-    
+
         </div>
-    
+
         <footer>
             <h4>Copyright <span>&copy;</span> 2024.</h4>
             <h4>All rights reserved | Designed and Developed by
                 Sharan Poojary</h4>
         </footer>
     </main>
-    
+
 
 
 </body>
