@@ -137,7 +137,6 @@ window.addEventListener("scroll", function () {
 
 
 let barValue = { html: 90, css: 70, javascript: 50, nodejs: 10, react: 10, angular: 10 };
-let skillBarAnim = document.querySelectorAll('.skill-per');
 
 let value = { comm: 55, probsol: 70, creativity: 60, teamwork: 75 };
 let scrollTriggered = false;
@@ -157,10 +156,26 @@ window.addEventListener('scroll', () => {
         scrollTriggered = true
 
         for (let key in barValue) {
-            let skillprogress = document.getElementById(key);
-            console.log(skillprogress);
-            skillprogress.style.width = `${barValue[key]}%`;
-            skillprogress.style.animation = 'progress 0.4s ease-in-out forwards';
+            let barProgress = document.getElementById(key);
+            // console.log(circularProgress);
+
+            let barProgressValue = barProgress
+                .querySelector(".tooltip")
+
+            let barProgressStartValue = 0,
+                barProgressEndValue = barValue[key],
+                speed = 40;
+
+            let bProgress = setInterval(() => {
+                barProgressStartValue++;
+
+                barProgressValue.textContent = `${barProgressStartValue}%`;
+                barProgress.style.width = `${barProgressStartValue}%`;
+
+                if (barProgressStartValue === barProgressEndValue) {
+                    clearInterval(bProgress);
+                }
+            }, speed)
         }
 
 
