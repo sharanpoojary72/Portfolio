@@ -615,39 +615,22 @@ nav li:first-child {
 .about {
     height: 100vh;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 5%;
-    /* background-color:var(--bg-color); */
     padding-inline: 200px;
     padding-block: 50px;
-    position: relative;
-    /* Make sure the .about section is positioned relative */
-    z-index: 1;
-    /* Keep content above the background */
-    overflow: hidden;
-    /* Hide overflow of the pseudo-element */
     border-bottom: 3px solid var(--bg-text-color);
 
 }
 
-/* .about::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url(./images/aboutme.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: grayscale(0) brightness(40%);
-    z-index: -1;
-    
-} */
+.aboutsection {
+    height: calc(100vh - 20vh);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 .about h2 {
     font-size: 30px;
@@ -656,14 +639,24 @@ nav li:first-child {
     /* color: #F6E1B6; */
 }
 
-.about p {
+.abouttext {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.abouttext p {
     text-align: justify;
     /* color: #F6E1B6; */
     color: var(--bg-text-color);
+    font-weight: 500;
 }
 
 .download-btn {
-    width: 20%;
+    width: 40%;
+    margin-top: 10%;
     padding: 1em 2em;
     background-color: var(--bg-theme-color);
     border: none;
@@ -691,6 +684,17 @@ nav li:first-child {
 .download-btn:hover {
     z-index: 0;
     box-shadow: -40px 0 60px #00ccff7e, 40px 0px 60px #e100ff80;
+}
+
+.aboutimg {
+    order: 2;
+    background-image: url(./images/aboutwhite.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
 }
 
 /*------------------ SKILLS ------------------*/
@@ -1217,13 +1221,29 @@ footer h4 {
     }
 
 
-    .about p {
+    .aboutsection {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .abouttext {
+        order: 2;
+    }
+
+    .aboutimg {
+        order: 1;
+    }
+
+    .abouttext p {
         text-align: justify;
     }
 
     .download-btn {
-        width: 25%;
+        width: 55%;
     }
+
+
 
     /*----------- SKILLS ------------------- */
     .skill-separator {
@@ -1311,6 +1331,7 @@ footer h4 {
 
     /*---------------- MAIN HERO---------------- */
     .home {
+        height: 100%;
         margin-top: 50px;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(2, 1fr);
@@ -1358,26 +1379,43 @@ footer h4 {
         padding-inline: 5rem;
         padding-block: 50px;
     }
+    
+    .aboutsection {
+        height: 100%;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+    }
 
+    .abouttext {
+        order: 2;
+    }
 
-    .about p {
+    .aboutimg {
+        order: 1;
+    }
+
+    .abouttext p {
         text-align: justify;
+        font-size: 1.2rem;
     }
 
     .download-btn {
-        width: 30%;
+        width: 60%;
     }
 
     /*----------- SKILLS ------------------- */
     .skill {
         height: 100%;
     }
+
     .skill-separator {
         margin-inline: 1rem;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(2, 1fr);
         gap: 1rem;
     }
+
     .skill-separator {
         margin-inline: 2.5rem;
     }
@@ -1422,6 +1460,7 @@ footer h4 {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
     }
+
     .proj-card-section {
         width: 90%;
     }
@@ -1577,7 +1616,7 @@ footer h4 {
     }
 
 
-    .about p {
+    .abouttext p {
         text-align: justify;
         font-size: 0.7rem;
     }
