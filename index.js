@@ -136,9 +136,9 @@ window.addEventListener("scroll", function () {
 //---------------- SKILL DATA ----------------
 
 
-let barValue = { html: 90, css: 70, javascript: 50, nodejs: 10, react: 10, angular: 10 };
+let barValue = { html: 90, css: 77, javascript: 68, nodejs: 60, react: 70, angular: 50 };
 
-let value = { comm: 55, probsol: 70, creativity: 60, teamwork: 75 };
+let value = { comm: 60, probsol: 65, creativity: 80, teamwork: 75 };
 let scrollTriggered = false;
 
 window.addEventListener('scroll', () => {
